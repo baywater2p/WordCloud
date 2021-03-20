@@ -20,7 +20,7 @@ words=["test", "hello world", "nice"];
 
 createCloud(words);
 
-function createCloud(w) {
+function createCloud(wrds) {
   x=0;
   y=0;
   gridx=[];
@@ -29,7 +29,7 @@ function createCloud(w) {
   yPx = h/rows; 
   for (i = 0; i < rows-1; i++) {
     for (j = 0; j < cols-1; j++) {
-      for (k = 0; k < words.length-1; k++) {
+      for (k = 0; k < wrds.length-1; k++) {
       x += Math.floor(xPx);
       y += Math.floor(yPx);
       gridx.push(x);
