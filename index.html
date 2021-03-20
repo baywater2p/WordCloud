@@ -9,18 +9,15 @@ Your browser does not support the canvas element.
 <script>
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
-
 ctx.font = "20px Arial";
+words=["test", "hello world", "nice"];
+createCloud(words);
+
+function createCloud(wrds) {
 w=500;
 h=500;
 rows=3;
 cols=5;
-
-words=["test", "hello world", "nice"];
-
-createCloud(words);
-
-function createCloud(wrds) {
   x=0;
   y=0;
   gridx=[];
@@ -31,8 +28,8 @@ function createCloud(wrds) {
     for (j = 0; j < cols; ++j) {
       x += xPx;
       y += yPx;
-      gridx.push(Math.floor(x/cols));
-      gridy.push(Math.floor(y/rows));
+      gridx.push(Math.floor(x/rows));
+      gridy.push(Math.floor(y/cols));
       idx = ((i)*rows)+((j)*cols);
       ctx.fillText(wrds[idx], x,y);
     }
