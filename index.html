@@ -20,6 +20,7 @@ dots = rows*columns;
 
 places = createArray(width, heigh, rows, columns, dots);
 place = dots => Math.floor(Math.random() * dots);
+
 x,y = places[place].split(",");
 
 addWord(word,parseInt(x),parseInt(y));
@@ -29,7 +30,7 @@ function addWord(a,b,c) {
 }
 
 function createArray(w,h,r,c,d) {
-  grid = [];
+  grid=[];i=1;while(grid.push(i++)<d);
   xPx = w/c;
   yPx = h/r; 
   for (i = 0; i < r-1; i++) {
