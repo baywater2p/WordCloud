@@ -31,14 +31,13 @@ function createCloud(w) {
       for (k = 0; k < words.length-1; k++) {
       x += Math.floor(xPx);
       y += Math.floor(yPx);
-      vals = x+","+y;
-      grid.push(vals);
+      grid.push(x:y);
       ctx.fillText(words[k], x,y);
     }
    }
   }
- console.log(grid);
  }
+ console.log(grid);
 </script>
 </body>
 </html>
