@@ -11,7 +11,6 @@ var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 ctx.font = "30px Arial";
 
-word="PaxLife";
 width=500;
 height=500;
 rows=3;
@@ -19,28 +18,28 @@ columns=5;
 dots = rows*columns;
 
 places = createArray(width, heigh, rows, columns, dots);
-place = dots => Math.floor(Math.random() * dots);
 
-x,y = places[place].split(",");
+words=["test", "hello world", "nice"];
 
-addWord(word,parseInt(x),parseInt(y));
-
-function addWord(a,b,c) {
-  ctx.fillText(a,b,c);
-}
+for (i = 0; i < words.length-1; i++) {
+  x = ;
+  y = ;
+  ctx.fillText(words[i],parseInt(x),parseInt(y));
+  }
 
 function createArray(w,h,r,c,d) {
-  grid=[];i=1;while(grid.push(i++)<d);
+  grid={};i=1;while(grid.push(i++)<d);
   xPx = w/c;
   yPx = h/r; 
   for (i = 0; i < r-1; i++) {
     for (j = 0; j < c-1; j++) {
     x += xPx;
     y += yPx;
-    vals = x+","+y;
+    vals =  ((i*r)+(j*c))+":'"+x+","+y+"'";
     grid.push(vals);
     }
    }
+  return grid;
   }
 
 </script>
