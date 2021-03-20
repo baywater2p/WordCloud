@@ -33,7 +33,7 @@ function createCloud(wrds) {
       y += yPx;
       gridx.push(Math.floor(x/cols));
       gridy.push(Math.floor(y/rows));
-      idx = ((i)*rows)+((j+1)*cols);
+      idx = ((i)*rows)+((j)*cols);
       ctx.fillText(wrds[idx], x,y);
     }
   }
