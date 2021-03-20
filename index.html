@@ -31,10 +31,10 @@ function createCloud(wrds) {
     for (j = 0; j < cols; j++) {
       x += xPx;
       y += yPx;
-      gridx.push(Math.floor(x/rows));
-      gridy.push(Math.floor(y/cols));
+      gridx.push(Math.floor(x/cols));
+      gridy.push(Math.floor(y/rows));
       idx = ((i+1)*rows)+((j+1)*cols);
-      ctx.fillText(words[idx], parseInt(x),parseInt(y));
+      ctx.fillText(wrds[idx], x,y));
     }
   }
  }
