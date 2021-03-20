@@ -29,14 +29,12 @@ function createCloud(wrds) {
   yPx = h/rows; 
   for (i = 0; i < rows; i++) {
     for (j = 0; j < cols; j++) {
-      for (k = 0; k < wrds.length; k++) {
       x += xPx;
       y += yPx;
       gridx.push(Math.floor(x/rows));
       gridy.push(Math.floor(y/cols));
       //ctx.fillText(words[k], parseInt(x),parseInt(y));
     }
-   }
   }
  }
  console.log(gridx);
