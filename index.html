@@ -14,34 +14,28 @@ words=["test", "hello world", "nice"];
 createCloud(words);
 
 function createCloud(...wrds) {
-  w = wrds;
 w=500;
 h=500;
 rows=3;
 cols=5;
-  x=0;
-  y=0;
-  gridx=[];
-  gridy=[];
-  xPx = w/cols;
-  yPx = h/rows; 
-  for (i = 0; i < rows; i++) {
-    for (j = 0; j < cols; ++j) {
-      x += xPx;
-      y += yPx;
-      gridx.push(Math.floor(x/rows));
-      gridy.push(Math.floor(y/cols));
-      idx = ((i)*rows)+(j);
-      ctx.fillText(wrds[idx], x,y);
-      console.log(idx);
-      console.log(w);
-      console.log(wrds);
-      console.log(wrds[idx]);
-    }
+x=0;
+y=0;
+gridx=[];
+gridy=[];
+xPx = w/cols;
+yPx = h/rows; 
+for (i = 0; i < rows; i++) {
+  for (j = 0; j < cols; ++j) {
+    idx = ((i)*rows)+(j);
+    x += xPx;
+    y += yPx;
+    gridx.push(Math.floor(x/rows));
+    gridy.push(Math.floor(y/cols));
+    ctx.fillText(wrds[idx], x,y);
+    console.log(wrds);
   }
  }
- console.log(gridx);
- console.log(gridy);
+}
 </script>
 </body>
 </html>
