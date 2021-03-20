@@ -27,13 +27,13 @@ function createCloud(wrds) {
   gridy=[];
   xPx = w/cols;
   yPx = h/rows; 
-  for (i = 0; i < rows-1; i++) {
-    for (j = 0; j < cols-1; j++) {
+  for (i = 0; i < rows; i++) {
+    for (j = 0; j < cols; j++) {
       for (k = 0; k < wrds.length; k++) {
       x += Math.floor(xPx);
       y += Math.floor(yPx);
-      gridx.push(x);
-      gridy.push(y);
+      gridx.push(x/c);
+      gridy.push(y/r);
         if(k==wrds.length){break;break;break;}
       //ctx.fillText(words[k], parseInt(x),parseInt(y));
     }
