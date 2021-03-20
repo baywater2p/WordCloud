@@ -26,18 +26,18 @@ function createCloud(w) {
   grid=[];
   xPx = w/cols;
   yPx = h/rows; 
-for (k = 0; k < words.length-1; k++) {
   for (i = 0; i < rows-1; i++) {
     for (j = 0; j < cols-1; j++) {
-    x += xPx;
-    y += yPx;
-    vals = x+","+y;
-    grid.push(vals);
-    console.log(grid);
-    ctx.fillText(words[k], x,y);
+      for (k = 0; k < words.length-1; k++) {
+      x += Math.floor(xPx);
+      y += Math.floor(yPx);
+      vals = x+","+y;
+      grid.push(vals);
+      ctx.fillText(words[k], x,y);
     }
    }
   }
+ console.log(grid);
  }
 </script>
 </body>
