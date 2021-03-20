@@ -27,8 +27,8 @@ function createCloud(w) {
   xPx = w/cols;
   yPx = h/rows; 
 for (k = 0; k < words.length-1; k++) {
-  for (i = 0; i < r-1; i++) {
-    for (j = 0; j < c-1; j++) {
+  for (i = 0; i < rows-1; i++) {
+    for (j = 0; j < cols-1; j++) {
     x += xPx;
     y += yPx;
     vals = x+","+y;
