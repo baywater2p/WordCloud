@@ -1,0 +1,4 @@
+word :: #
+1212hello :: 8
+test :: 0
+helloWorld. :: 5
