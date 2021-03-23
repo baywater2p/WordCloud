@@ -24,9 +24,9 @@ gridx=[];
 gridy=[];
 xPx = w/cols;
 yPx = h/rows; 
-for (i = 1; i =< rows; i++) {
+for (i = 0; i < rows; i++) {
   for (j = 0; j < cols; ++j) {
-    idx = ((i)*rows)+(j);
+    idx = 0;
     x += xPx;
     y += yPx;
     gridx.push(Math.floor(x/rows));
